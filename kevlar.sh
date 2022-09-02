@@ -66,3 +66,5 @@ iptables -A INPUT -i eno1 -p tcp -m tcp --dport 80 -m state --state NEW -j ACCEP
 iptables -A INPUT -i eno1 -p tcp -m tcp --dport 443 -m state --state NEW -j ACCEPT
 iptables -A INPUT -i eno1 -p icmp -j ACCEPT
 iptables -A INPUT -i eno1 -j DROP
+iptables -A INPUT -p tcp --dport http -j ACCEPT
+iptables -A INPUT -p tcp --dport https -j ACCEPT
